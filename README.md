@@ -6,6 +6,8 @@
 [![Platform](https://img.shields.io/cocoapods/p/YSHKeyBoardView.svg?style=flat)](https://cocoapods.org/pods/YSHKeyBoardView)
 
 ## Example
+![image](https://github.com/QiuYeHong90/YSHKeyBoardView/blob/master/Example/1.png)
+
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 自定义iOS 数字键盘
