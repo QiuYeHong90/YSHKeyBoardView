@@ -9,5 +9,6 @@
 @import UIKit;
 
 @interface YSHViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
