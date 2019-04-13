@@ -8,7 +8,7 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
+自定义iOS 数字键盘
 ## Requirements
 
 ## Installation
@@ -22,7 +22,7 @@ pod 'YSHKeyBoardView'
 
 ## Author
 
-793983383@qq.com, 793983383@qq.com
+秋叶红
 
 ## License
 
