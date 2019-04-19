@@ -45,6 +45,15 @@
     [self.textField textChanged:self.textField];
 }
 
+
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    
+}
+
+
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
@@ -118,7 +127,8 @@
         self.textLab = textLab;
         self.textLab.text = @"0.00";
         
-       
+        
+        [self initLoadView];
         
     }
     return self;
@@ -151,7 +161,6 @@
     self.textLab.frame = self.bounds ;
     self.textLab.right =self.bounds.size.width - 15;
    
-    
     switch (self.typeIput) {
         case 0:
         {
@@ -161,9 +170,7 @@
         case 1:
         {
             self.textLab.right =self.bounds.size.width;
-            self.textLab.font = [UIFont systemFontOfSize:12];
-            self.textLab.text = @"";
-            self.textLab.textAlignment = NSTextAlignmentCenter ;
+            
         }
             break;
         default:
@@ -173,6 +180,28 @@
     
 }
 
+
+-(void)initLoadView
+{
+    switch (self.typeIput) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+        
+            self.textLab.font = [UIFont systemFontOfSize:12];
+            self.textLab.text = @"";
+            self.textLab.textAlignment = NSTextAlignmentCenter ;
+        }
+            break;
+        default:
+            break;
+    }
+    
+}
 
 
 -(void)dealloc
