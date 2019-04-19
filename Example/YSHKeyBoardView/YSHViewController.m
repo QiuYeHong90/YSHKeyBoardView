@@ -25,6 +25,8 @@
     [UIApplication sharedApplication].keyWindow.rootViewController = [bd instantiateViewControllerWithIdentifier:@"YSHViewController"];
     
     
+    
+    
 }
 
 - (void)viewDidLoad
@@ -35,7 +37,8 @@
     }else{
         [self.button setTitle:@"其他" forState:UIControlStateNormal];
     }
-    
+    self.textView.placeholder = @"你好先生";
+    self.textView.valueStr = @"";
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

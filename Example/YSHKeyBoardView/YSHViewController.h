@@ -8,7 +8,10 @@
 
 @import UIKit;
 
+
+#import <YSHDecmialTextFieldView.h>
 @interface YSHViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet YSHDecmialTextFieldView *textView;
 
 @end

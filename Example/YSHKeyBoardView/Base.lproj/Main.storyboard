@@ -57,11 +57,12 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="4bc-lD-2NC" id="RNC-Ty-SXb"/>
+                        <outlet property="textView" destination="nEU-VH-z1z" id="E2f-Tj-3Ew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
+            <point key="canvasLocation" x="236" y="424"/>
         </scene>
     </scenes>
 </document>

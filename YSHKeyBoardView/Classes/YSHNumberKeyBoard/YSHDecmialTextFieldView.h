@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,assign) IBInspectable NSInteger fontSize;   
 
+@property (nonatomic,copy) NSString * placeholder;
 
 /**
  0 默认 1 小框输入

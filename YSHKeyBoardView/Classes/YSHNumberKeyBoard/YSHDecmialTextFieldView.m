@@ -14,7 +14,9 @@
 #define IS_IPHONE_5 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0)
 
 @interface YSHDecmialTextFieldView ()<UITextFieldDelegate>
-
+{
+    NSString * _placeholder;
+}
 /**
  输入框 默认隐藏
  */
@@ -24,7 +26,21 @@
 
 
 @implementation YSHDecmialTextFieldView
-@dynamic fontSize;
+@dynamic fontSize,placeholder;
+
+-(void)setPlaceholder:(NSString *)placeholder
+{
+    _placeholder = placeholder;
+    
+}
+
+- (NSString *)placeholder
+{
+    if (!_placeholder) {
+        _placeholder = @"";
+    }
+    return _placeholder;
+}
 
 -(void)setFontSize:(NSInteger)fontSize
 {
@@ -46,11 +62,13 @@
 }
 
 
+
+
 -(void)awakeFromNib
 {
     [super awakeFromNib];
     
-    
+    [self initLoadView];
 }
 
 
@@ -83,8 +101,7 @@
                 case 1:
                 {
                     if ([weakSelf.textField.text isEqualToString:@""]||weakSelf.textField.text==nil) {
-                        weakSelf.textLab.text = @"";
-                        
+                        weakSelf.textLab.text = self.placeholder;
                         if (weakSelf.CallBlock) {
                             weakSelf.CallBlock(@"", @"");
                         }
@@ -128,7 +145,7 @@
         self.textLab.text = @"0.00";
         
         
-        [self initLoadView];
+        
         
     }
     return self;
@@ -169,6 +186,9 @@
             break;
         case 1:
         {
+            
+            self.textLab.textAlignment = NSTextAlignmentCenter ;
+            self.textLab.font = [UIFont systemFontOfSize:12];
             self.textLab.right =self.bounds.size.width;
             
         }
@@ -191,10 +211,9 @@
             break;
         case 1:
         {
-        
-            self.textLab.font = [UIFont systemFontOfSize:12];
-            self.textLab.text = @"";
-            self.textLab.textAlignment = NSTextAlignmentCenter ;
+            
+            self.textLab.text = self.placeholder;
+            
         }
             break;
         default:
