@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (YSHDecimal)
 /**
- 此为小数时候支持
+ 此为小数时候支持 转换 用户展示的
  */
 -(NSString *)encodeDecimalChangeformat;
 
 /**
- 转换
+ 转换 用户展示的转换数据存储的
  */
 -(NSString *)decodeencodeDecimalChangeformat;
 

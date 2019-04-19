@@ -51,7 +51,7 @@
             
             weakSelf.textLab.text = seeValue;
             if ([seeValue isEqualToString:@""]||seeValue==nil) {
-                weakSelf.textLab.text = @"0";
+                weakSelf.textLab.text = @"0.00";
             }
             if (weakSelf.CallBlock) {
                 weakSelf.CallBlock(value, seeValue);
@@ -78,7 +78,7 @@
         textLab.textColor = [UIColor colorWithHexString:@"333333"];
         [self addSubview:textLab];
         self.textLab = textLab;
-        self.textLab.text = @"0";
+        self.textLab.text = @"0.00";
     }
     return self;
 }

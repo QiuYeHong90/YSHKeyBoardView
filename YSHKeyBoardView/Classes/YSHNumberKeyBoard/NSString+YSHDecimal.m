@@ -126,7 +126,7 @@
         
         newStr = [NSString stringWithFormat:@"%@.%@",num,xiaoShu];
     }
-    
+    newStr = [NSString stringWithFormat:@"%.2f",[newStr doubleValue]];
     
     
     return  newStr;
@@ -134,5 +134,10 @@
     
     
 }
+
+
+
+
+
 
 @end
