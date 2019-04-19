@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,assign) IBInspectable NSInteger fontSize;   
 
+
+/**
+ 0 默认 1 小框输入
+ */
+@property (nonatomic,assign) IBInspectable NSInteger typeIput;
+
 /**
  输入框 默认隐藏
  */

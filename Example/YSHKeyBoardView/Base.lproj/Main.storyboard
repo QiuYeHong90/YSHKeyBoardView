@@ -27,12 +27,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEU-VH-z1z" customClass="YSHDecmialTextFieldView">
-                                <rect key="frame" x="54" y="306" width="99" height="34"/>
+                                <rect key="frame" x="54" y="306" width="99" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                         <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeIput">
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

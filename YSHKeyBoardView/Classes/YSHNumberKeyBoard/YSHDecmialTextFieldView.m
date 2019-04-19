@@ -62,9 +62,38 @@
             if ([seeValue isEqualToString:@""]||seeValue==nil) {
                 weakSelf.textLab.text = @"0.00";
             }
-            if (weakSelf.CallBlock) {
-                weakSelf.CallBlock(value, seeValue);
+            
+            switch (self.typeIput) {
+                case 0:
+                {
+                    if (weakSelf.CallBlock) {
+                        weakSelf.CallBlock(value, seeValue);
+                    }
+                }
+                    break;
+                case 1:
+                {
+                    if ([weakSelf.textField.text isEqualToString:@""]||weakSelf.textField.text==nil) {
+                        weakSelf.textLab.text = @"";
+                        
+                        if (weakSelf.CallBlock) {
+                            weakSelf.CallBlock(@"", @"");
+                        }
+                    }else{
+                        
+                        if (weakSelf.CallBlock) {
+                            weakSelf.CallBlock(value, seeValue);
+                        }
+                    }
+                    
+                }
+                    break;
+                default:
+                    break;
             }
+            
+            
+            
             
         };
         
@@ -88,6 +117,9 @@
         [self addSubview:textLab];
         self.textLab = textLab;
         self.textLab.text = @"0.00";
+        
+       
+        
     }
     return self;
 }
@@ -118,6 +150,27 @@
     self.textField.frame = self.bounds;
     self.textLab.frame = self.bounds ;
     self.textLab.right =self.bounds.size.width - 15;
+   
+    
+    switch (self.typeIput) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            self.textLab.right =self.bounds.size.width;
+            self.textLab.font = [UIFont systemFontOfSize:12];
+            self.textLab.text = @"";
+            self.textLab.textAlignment = NSTextAlignmentCenter ;
+        }
+            break;
+        default:
+            break;
+    }
+    
+    
 }
 
 
