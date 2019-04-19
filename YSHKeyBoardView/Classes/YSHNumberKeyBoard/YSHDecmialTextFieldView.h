@@ -12,7 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YSHDecmialTextFieldView : UIView
 
+@property(nonatomic,assign) IBInspectable NSInteger fontSize;   
 
+/**
+ 输入框 默认隐藏
+ */
+@property (nonatomic,strong) UILabel * textLab;
 
 @property (nonatomic,copy) void(^CallBlock)(NSString * value,NSString * seeValue);
 

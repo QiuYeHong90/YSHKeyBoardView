@@ -19,14 +19,23 @@
  输入框 默认隐藏
  */
 @property (nonatomic,strong) YSHDecimalTextField * textField;
-/**
- 输入框 默认隐藏
- */
-@property (nonatomic,strong) UILabel * textLab;
+
 @end
 
 
 @implementation YSHDecmialTextFieldView
+@dynamic fontSize;
+
+-(void)setFontSize:(NSInteger)fontSize
+{
+    self.textLab.font = [UIFont systemFontOfSize:fontSize];
+}
+
+-(NSInteger)fontSize
+{
+    return [self.textLab.font pointSize];
+}
+
 
 -(void)setValueStr:(NSString *)valueStr
 {
