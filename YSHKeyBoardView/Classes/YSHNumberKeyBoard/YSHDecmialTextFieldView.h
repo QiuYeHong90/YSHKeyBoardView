@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+@property (nonatomic,copy) void(^CallBlock)(NSString * value,NSString * seeValue);
 
+@property (nonatomic,copy) NSString * valueStr;
 /**
  唤起键盘
  */

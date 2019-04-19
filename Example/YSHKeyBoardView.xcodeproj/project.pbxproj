@@ -306,7 +306,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YSHKeyBoardView_Example/Pods-YSHKeyBoardView_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YSHKeyBoardView_Example/Pods-YSHKeyBoardView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/YSHKeyBoardView/YSHKeyBoardView.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
@@ -319,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSHKeyBoardView_Example/Pods-YSHKeyBoardView_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YSHKeyBoardView_Example/Pods-YSHKeyBoardView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BC5085C93F25448683ECC2F6 /* [CP] Check Pods Manifest.lock */ = {

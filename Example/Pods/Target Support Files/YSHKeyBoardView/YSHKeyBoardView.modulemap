@@ -1,0 +1,6 @@
+framework module YSHKeyBoardView {
+  umbrella header "YSHKeyBoardView-umbrella.h"
+
+  export *
+  module * { export * }
+}

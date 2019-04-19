@@ -19,7 +19,7 @@
     NSArray * tempArr = [self componentsSeparatedByString:@"."];
     if (tempArr.count==0) {
         //        只有整数
-        return @"0";
+        return @"0.00";
     }
     NSString * xiaoShu ;
     NSString * num ;

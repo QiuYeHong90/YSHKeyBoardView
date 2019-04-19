@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSInteger)decimalType;
 - (BOOL)textField:(UITextField *)textField  replacementString:(NSString *)string;
 -(void)clearWeiLing;
+- (void)textChanged:(UITextField *)textField;
 @end
 
 NS_ASSUME_NONNULL_END

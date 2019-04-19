@@ -1,0 +1,6 @@
+framework module Pods_YSHKeyBoardView_Tests {
+  umbrella header "Pods-YSHKeyBoardView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

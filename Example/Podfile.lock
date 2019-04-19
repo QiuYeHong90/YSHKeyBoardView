@@ -1,0 +1,25 @@
+PODS:
+  - YSHKeyBoardView (0.1.0):
+    - YYKit (~> 1.0.9)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - YSHKeyBoardView (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - YYKit
+
+EXTERNAL SOURCES:
+  YSHKeyBoardView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YSHKeyBoardView: 6427a6b613767f9dc74b798a3b143d970d0dfbb0
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 5560ed71bc4b54d146607a88b6865a629e403a5c
+
+COCOAPODS: 1.6.0

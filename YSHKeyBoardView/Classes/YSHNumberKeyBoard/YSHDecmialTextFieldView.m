@@ -28,6 +28,13 @@
 
 @implementation YSHDecmialTextFieldView
 
+-(void)setValueStr:(NSString *)valueStr
+{
+    _valueStr = valueStr;
+    
+    self.textField.text = valueStr;
+    [self.textField textChanged:self.textField];
+}
 
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
@@ -46,6 +53,10 @@
             if ([seeValue isEqualToString:@""]||seeValue==nil) {
                 weakSelf.textLab.text = @"0";
             }
+            if (weakSelf.CallBlock) {
+                weakSelf.CallBlock(value, seeValue);
+            }
+            
         };
         
         
