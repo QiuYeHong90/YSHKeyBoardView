@@ -66,12 +66,16 @@
 
 - (BOOL)textField:(UITextField *)textField  replacementString:(NSString *)string
 {
+    if (textField.text.length>=NUMBER_TF_DY) {
+        return NO;
+    }
+    NSString * text = textField.text;
     NSString * appendStr = string;
-    NSString * textA = [textField.text stringByAppendingString:appendStr];
+    NSString * textA = [text stringByAppendingString:appendStr];
     NSString * testAB = [textA textDecimalForamt];
     if ([self isPureInt:testAB]||[self isPureFloat:testAB]) {
         //            加
-        if (testAB.length>13) {
+        if (testAB.length>NUMBER_TF_DY) {
             return NO;
         }
         return YES;

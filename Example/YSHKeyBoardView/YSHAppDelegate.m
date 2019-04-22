@@ -13,6 +13,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    double ff = 236;
+    
+    NSLog(@"sss----%ld",(long)(ff/10.f));
+    
+    NSString * xiaoShu = @"1234";
+    
+    
+    NSInteger num = (xiaoShu.length-2);
+    
+    NSString *str1 = [xiaoShu substringToIndex:2];
+    
+    
+    
+    
+    
+   NSInteger bnn  = [xiaoShu integerValue];
+//    NSLog(@"--%ld",(long)(bnn/chushu));
+//    xiaoShu  = [NSString stringWithFormat:@"%ld",(long)(([xiaoShu integerValue])/chushu];
+    NSLog(@"sssxiaoShu----%@",str1);
     return YES;
 }
 

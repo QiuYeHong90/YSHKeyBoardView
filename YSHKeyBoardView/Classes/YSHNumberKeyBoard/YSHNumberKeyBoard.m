@@ -224,9 +224,7 @@
         default:
         {
             
-            if (self.textInput.text.length>10) {
-                return;
-            }
+            
             
             
             // 数字

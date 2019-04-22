@@ -123,10 +123,15 @@
     if (xiaoShu==nil) {
         newStr = [NSString stringWithFormat:@"%@",num];
     }else{
+        if (xiaoShu.length>2) {
+           
+            xiaoShu = [xiaoShu substringToIndex:2];
+           
+        }
         
         newStr = [NSString stringWithFormat:@"%@.%@",num,xiaoShu];
     }
-    newStr = [NSString stringWithFormat:@"%.2f",[newStr doubleValue]];
+//    newStr = [NSString stringWithFormat:@"%.2f",[newStr doubleValue]];
     
     
     return  newStr;
