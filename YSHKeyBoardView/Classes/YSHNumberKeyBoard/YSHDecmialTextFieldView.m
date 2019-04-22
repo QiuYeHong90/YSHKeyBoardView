@@ -78,7 +78,6 @@
     if (self) {
         
         
-    
         YSHDecimalTextField * textField = [YSHDecimalTextField new];
         textField.textAlignment = NSTextAlignmentRight ;
         __weak typeof(self) weakSelf = self ;

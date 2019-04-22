@@ -71,7 +71,7 @@
     NSString * testAB = [textA textDecimalForamt];
     if ([self isPureInt:testAB]||[self isPureFloat:testAB]) {
         //            加
-        if (testAB.length>11) {
+        if (testAB.length>13) {
             return NO;
         }
         return YES;
