@@ -90,22 +90,44 @@
             }
             
             switch (self.typeIput) {
-                case 0:
+                
+                case YSHDecmialTextFieldViewTypeDefalut:
                 {
                     if (weakSelf.CallBlock) {
                         weakSelf.CallBlock(value, seeValue);
                     }
                 }
                     break;
-                case 1:
+                case YSHDecmialTextFieldViewTypeSmall:
                 {
                     if ([weakSelf.textField.text isEqualToString:@""]||weakSelf.textField.text==nil) {
                         weakSelf.textLab.text = self.placeholder;
+                        weakSelf.textLab.textColor = [UIColor colorWithHexString:@"#c7c7cc"];
                         if (weakSelf.CallBlock) {
                             weakSelf.CallBlock(@"", @"");
                         }
                     }else{
-                        
+                        weakSelf.textLab.textColor = [UIColor colorWithHexString:@"333333"];
+                        if (weakSelf.CallBlock) {
+                            weakSelf.CallBlock(value, seeValue);
+                        }
+                    }
+                    
+                }
+                    break;
+                case YSHDecmialTextFieldViewTypeHelath:
+                {
+                    
+                    weakSelf.textField.numMaxLenght = self.numMaxLenght;
+                    
+                    if ([weakSelf.textField.text isEqualToString:@""]||weakSelf.textField.text==nil) {
+                        weakSelf.textLab.text = self.placeholder;
+                        weakSelf.textLab.textColor = [UIColor colorWithHexString:@"#c7c7cc"];
+                        if (weakSelf.CallBlock) {
+                            weakSelf.CallBlock(@"", @"");
+                        }
+                    }else{
+                        weakSelf.textLab.textColor = [UIColor colorWithHexString:@"333333"];
                         if (weakSelf.CallBlock) {
                             weakSelf.CallBlock(value, seeValue);
                         }
@@ -178,16 +200,27 @@
     self.textLab.right =self.bounds.size.width - 15;
    
     switch (self.typeIput) {
-        case 0:
+        case YSHDecmialTextFieldViewTypeDefalut:
         {
             
         }
             break;
-        case 1:
+        
+        case YSHDecmialTextFieldViewTypeSmall:
         {
             
             self.textLab.textAlignment = NSTextAlignmentCenter ;
             self.textLab.font = [UIFont systemFontOfSize:12];
+            self.textLab.right =self.bounds.size.width;
+            
+        }
+            break;
+        
+        case YSHDecmialTextFieldViewTypeHelath:
+        {
+            
+            self.textLab.textAlignment = NSTextAlignmentRight ;
+            self.textLab.font = [UIFont systemFontOfSize:14];
             self.textLab.right =self.bounds.size.width;
             
         }
@@ -203,12 +236,13 @@
 -(void)initLoadView
 {
     switch (self.typeIput) {
-        case 0:
+        case YSHDecmialTextFieldViewTypeDefalut:
         {
             
         }
             break;
-        case 1:
+        case YSHDecmialTextFieldViewTypeSmall:
+        case YSHDecmialTextFieldViewTypeHelath:
         {
             
             self.textLab.text = self.placeholder;

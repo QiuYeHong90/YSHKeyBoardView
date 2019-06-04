@@ -6,6 +6,7 @@
 //  Copyright (c) 2019 793983383@qq.com. All rights reserved.
 //
 
+#import <YSHKeyBoardView/NSString+YSHDecimal.h>
 #import "YSHAppDelegate.h"
 
 @implementation YSHAppDelegate
@@ -13,7 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
+    NSString * temm = [@"1222222222222222222222222222223333333333333333333300000000000000000000000000000000000000000000000000000000000090098402342371222222222222222222222222222223333333333333333333300000000000000000000000000000" encodeDecimalChangeformat];
+    NSLog(@"temm ===%@  temm %ld",temm,temm.length);
     double ff = 236;
     
     NSLog(@"sss----%ld",(long)(ff/10.f));

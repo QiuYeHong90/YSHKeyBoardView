@@ -18,12 +18,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString * numText;
 
 @property (nonatomic,copy) void(^CallBlock)(NSString * value,NSString * seeValue);
+
+@property (nonatomic,copy) NSInteger (^numMaxLenght)(void);
 /**
  0 中国国际通用
  1 越南
  2 其他
  */
-@property (nonatomic,assign)NSInteger decimalType;
+@property (nonatomic,assign) NSInteger decimalType;
 /**
  0 中国国际通用
  1 越南

@@ -75,13 +75,17 @@
     NSString * testAB = [textA textDecimalForamt];
     if ([self isPureInt:testAB]||[self isPureFloat:testAB]) {
         //            加
+        NSInteger num = NUMBER_TF_DY;
+        if (self.numMaxLenght) {
+            num = self.numMaxLenght();
+        }
         if ([self isPureInt:testAB]) {
-            if (testAB.length>(NUMBER_TF_DY-3)) {
+            if (testAB.length>(num-3)) {
                 return NO;
             }
         }
         if ([self isPureFloat:testAB]) {
-            if (testAB.length>NUMBER_TF_DY) {
+            if (testAB.length>num) {
                 return NO;
             }
         }

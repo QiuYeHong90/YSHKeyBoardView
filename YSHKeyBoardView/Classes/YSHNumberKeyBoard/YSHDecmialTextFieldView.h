@@ -5,6 +5,13 @@
 //  Created by shuhui on 2019/4/12.
 //  Copyright © 2019 cqdunyue. All rights reserved.
 //
+
+typedef NS_ENUM(NSUInteger, YSHDecmialTextFieldViewType) {
+    YSHDecmialTextFieldViewTypeDefalut = 0,
+    YSHDecmialTextFieldViewTypeSmall,
+    YSHDecmialTextFieldViewTypeHelath,
+};
+
 #import "YSHDecimalTextField.h"
 #import <UIKit/UIKit.h>
 
@@ -17,9 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString * placeholder;
 
 /**
- 0 默认 1 小框输入
+ 0 默认 1 小框输入 2 身高体重
  */
-@property (nonatomic,assign) IBInspectable NSInteger typeIput;
+@property (nonatomic,assign) IBInspectable YSHDecmialTextFieldViewType typeIput;
 
 /**
  输入框 默认隐藏
@@ -27,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) UILabel * textLab;
 
 @property (nonatomic,copy) void(^CallBlock)(NSString * value,NSString * seeValue);
-
+@property (nonatomic,copy) NSInteger(^numMaxLenght)(void);
 @property (nonatomic,copy) NSString * valueStr;
 /**
  唤起键盘
