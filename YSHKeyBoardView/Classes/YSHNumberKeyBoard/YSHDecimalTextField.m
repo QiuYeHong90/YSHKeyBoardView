@@ -121,7 +121,11 @@
     if (flag) {
         NSArray *tempArr = [nowStr componentsSeparatedByString:@"."];
         NSString * tempStr = [tempArr lastObject];
-        return  tempStr.length<3;
+        NSInteger floatNum = 3;
+        if (self.floatMaxLenght) {
+           floatNum = self.floatMaxLenght();
+        }
+        return  tempStr.length<floatNum;
     }
     return flag;
     

@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) void(^CallBlock)(NSString * value,NSString * seeValue);
 
 @property (nonatomic,copy) NSInteger (^numMaxLenght)(void);
+@property (nonatomic,copy) NSInteger (^floatMaxLenght)(void);
 /**
  0 中国国际通用
  1 越南
