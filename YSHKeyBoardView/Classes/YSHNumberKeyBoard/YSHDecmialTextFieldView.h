@@ -35,7 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,copy) void(^CallBlock)(NSString * value,NSString * seeValue);
 @property (nonatomic,copy) NSInteger(^numMaxLenght)(void);
-@property (nonatomic,copy) NSInteger(^floatMaxLenght)(void);
 @property (nonatomic,copy) NSString * valueStr;
 /**
  唤起键盘

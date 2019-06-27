@@ -119,7 +119,7 @@
                 {
                     
                     weakSelf.textField.numMaxLenght = self.numMaxLenght;
-                    weakSelf.textField.floatMaxLenght = self.floatMaxLenght;
+                    
                     if ([weakSelf.textField.text isEqualToString:@""]||weakSelf.textField.text==nil) {
                         weakSelf.textLab.text = self.placeholder;
                         weakSelf.textLab.textColor = [UIColor colorWithHexString:@"#c7c7cc"];
