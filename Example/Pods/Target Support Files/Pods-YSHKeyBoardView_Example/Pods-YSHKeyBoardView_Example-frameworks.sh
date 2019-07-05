@@ -153,10 +153,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YSHKeyBoardView/YSHKeyBoardView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YSHKeyBoardView/YSHKeyBoardView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework"
 fi

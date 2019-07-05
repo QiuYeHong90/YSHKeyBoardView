@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E809F17C74696685D9D0D388E4DA9274"
+               BlueprintIdentifier = "86B5F9CF5C1135942415C99DF9F20FF5"
                BlueprintName = "YSHKeyBoardView"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "YSHKeyBoardView.framework">

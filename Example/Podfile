@@ -4,7 +4,7 @@ platform :ios, '8.0'
 
 target 'YSHKeyBoardView_Example' do
   pod 'YSHKeyBoardView', :path => '../'
-
+  pod 'MLeaksFinder'
   target 'YSHKeyBoardView_Tests' do
     inherit! :search_paths
     

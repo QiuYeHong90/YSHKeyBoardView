@@ -25,7 +25,7 @@ typedef NS_ENUM(NSUInteger, RYInputType) {
 
 @interface YSHNumberKeyBoard : UIView
 
-@property (nonatomic, strong) YSHDecimalTextField<UITextInput> *textInput;
+@property (nonatomic, weak) YSHDecimalTextField<UITextInput> *textInput;
 @property (nonatomic, assign) RYInputType inputType;        // 键盘类型
 @property (nonatomic, strong) NSNumber *interval;           // 每隔多少个数字空一格
 

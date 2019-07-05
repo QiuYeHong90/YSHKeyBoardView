@@ -20,7 +20,7 @@
 /**
  输入框 默认隐藏
  */
-@property (nonatomic,strong) YSHDecimalTextField * textField;
+@property (nonatomic,weak) YSHDecimalTextField * textField;
 
 @end
 
@@ -83,25 +83,25 @@
         __weak typeof(self) weakSelf = self ;
         textField.CallBlock = ^(NSString * _Nonnull value,NSString * seeValue) {
             NSLog(@"textField == %@",value);
-            
+
             weakSelf.textLab.text = seeValue;
             if ([seeValue isEqualToString:@""]||seeValue==nil) {
                 weakSelf.textLab.text = @"0.00";
             }
-            
-            switch (self.typeIput) {
-                
-                case YSHDecmialTextFieldViewTypeDefalut:
+
+            switch (weakSelf.typeIput) {
+
+                    case YSHDecmialTextFieldViewTypeDefalut:
                 {
                     if (weakSelf.CallBlock) {
                         weakSelf.CallBlock(value, seeValue);
                     }
                 }
                     break;
-                case YSHDecmialTextFieldViewTypeSmall:
+                    case YSHDecmialTextFieldViewTypeSmall:
                 {
                     if ([weakSelf.textField.text isEqualToString:@""]||weakSelf.textField.text==nil) {
-                        weakSelf.textLab.text = self.placeholder;
+                        weakSelf.textLab.text = weakSelf.placeholder;
                         weakSelf.textLab.textColor = [UIColor colorWithHexString:@"#c7c7cc"];
                         if (weakSelf.CallBlock) {
                             weakSelf.CallBlock(@"", @"");
@@ -112,16 +112,16 @@
                             weakSelf.CallBlock(value, seeValue);
                         }
                     }
-                    
+
                 }
                     break;
-                case YSHDecmialTextFieldViewTypeHelath:
+                    case YSHDecmialTextFieldViewTypeHelath:
                 {
-                    
-                    weakSelf.textField.numMaxLenght = self.numMaxLenght;
-                    weakSelf.textField.floatMaxLenght = self.floatMaxLenght;
+
+                    weakSelf.textField.numMaxLenght = weakSelf.numMaxLenght;
+                    weakSelf.textField.floatMaxLenght = weakSelf.floatMaxLenght;
                     if ([weakSelf.textField.text isEqualToString:@""]||weakSelf.textField.text==nil) {
-                        weakSelf.textLab.text = self.placeholder;
+                        weakSelf.textLab.text = weakSelf.placeholder;
                         weakSelf.textLab.textColor = [UIColor colorWithHexString:@"#c7c7cc"];
                         if (weakSelf.CallBlock) {
                             weakSelf.CallBlock(@"", @"");
@@ -132,16 +132,16 @@
                             weakSelf.CallBlock(value, seeValue);
                         }
                     }
-                    
+
                 }
                     break;
                 default:
                     break;
             }
-            
-            
-            
-            
+
+
+
+
         };
         
         

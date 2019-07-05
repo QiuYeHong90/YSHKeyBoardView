@@ -58,6 +58,8 @@
 }
 
 
+
+
 -(void)textField:(UITextField *)textField range:(NSRange)range
 {
     textField.text = [textField.text substringWithRange:range];
@@ -130,6 +132,11 @@
     return flag;
     
 }
+
+
+
+
+
 
 
 - (void)textChanged:(UITextField *)textField {

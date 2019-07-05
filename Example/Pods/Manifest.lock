@@ -1,4 +1,7 @@
 PODS:
+  - FBRetainCycleDetector (0.1.4)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
   - YSHKeyBoardView (0.1.0):
     - YYKit (~> 1.0.9)
   - YYKit (1.0.9):
@@ -6,10 +9,13 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - MLeaksFinder
   - YSHKeyBoardView (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FBRetainCycleDetector
+    - MLeaksFinder
     - YYKit
 
 EXTERNAL SOURCES:
@@ -17,9 +23,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   YSHKeyBoardView: 6427a6b613767f9dc74b798a3b143d970d0dfbb0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 5560ed71bc4b54d146607a88b6865a629e403a5c
+PODFILE CHECKSUM: 9b600cc0a141d29f6bb3706725b8318576c56680
 
 COCOAPODS: 1.6.0
