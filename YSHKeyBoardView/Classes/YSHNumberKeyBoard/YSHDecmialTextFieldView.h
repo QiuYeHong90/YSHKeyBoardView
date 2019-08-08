@@ -10,6 +10,7 @@ typedef NS_ENUM(NSUInteger, YSHDecmialTextFieldViewType) {
     YSHDecmialTextFieldViewTypeDefalut = 0,
     YSHDecmialTextFieldViewTypeSmall,
     YSHDecmialTextFieldViewTypeHelath,
+    YSHDecmialTextFieldViewTypeDiet,
 };
 
 #import "YSHDecimalTextField.h"

@@ -116,6 +116,7 @@
                 }
                     break;
                     case YSHDecmialTextFieldViewTypeHelath:
+                    case YSHDecmialTextFieldViewTypeDiet:
                 {
 
                     weakSelf.textField.numMaxLenght = weakSelf.numMaxLenght;
@@ -225,6 +226,15 @@
             
         }
             break;
+        case YSHDecmialTextFieldViewTypeDiet:
+        {
+
+            self.textLab.textAlignment = NSTextAlignmentCenter ;
+            self.textLab.font = [UIFont systemFontOfSize:14];
+            self.textLab.right =self.bounds.size.width;
+
+        }
+            break;
         default:
             break;
     }
@@ -243,6 +253,7 @@
             break;
         case YSHDecmialTextFieldViewTypeSmall:
         case YSHDecmialTextFieldViewTypeHelath:
+        case YSHDecmialTextFieldViewTypeDiet:
         {
             
             self.textLab.text = self.placeholder;
