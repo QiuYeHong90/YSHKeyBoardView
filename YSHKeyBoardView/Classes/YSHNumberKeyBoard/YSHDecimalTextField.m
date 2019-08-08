@@ -78,13 +78,19 @@
     if ([self isPureInt:testAB]||[self isPureFloat:testAB]) {
         //            加
         NSInteger num = NUMBER_TF_DY;
+        NSInteger floatNum = 3;
         if (self.numMaxLenght) {
             num = self.numMaxLenght();
         }
+        if (self.floatMaxLenght) {
+            floatNum = self.floatMaxLenght()+1;
+        }
         if ([self isPureInt:testAB]) {
-            if (testAB.length>(num-3)) {
+            if (testAB.length>(num-floatNum)) {
                 return NO;
             }
+
+
         }
         if ([self isPureFloat:testAB]) {
             if (testAB.length>num) {
@@ -125,7 +131,7 @@
         NSString * tempStr = [tempArr lastObject];
         NSInteger floatNum = 3;
         if (self.floatMaxLenght) {
-           floatNum = self.floatMaxLenght();
+           floatNum = self.floatMaxLenght()+1;
         }
         return  tempStr.length<floatNum;
     }
