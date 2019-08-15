@@ -149,8 +149,7 @@
         self.textField = textField ;
         self.textField.hidden = YES ;
         [self addSubview:self.textField];
-        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
-        [self addGestureRecognizer:tap];
+
         
 //        textLab
         UILabel * textLab = [UILabel new];
@@ -165,9 +164,16 @@
         [self addSubview:textLab];
         self.textLab = textLab;
         self.textLab.text = @"0.00";
-        
-        
-        
+//        self.textLab.backgroundColor = [UIColor grayColor];
+        {
+            UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
+            [self addGestureRecognizer:tap];
+        }
+        {
+            UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
+            [self.textLab addGestureRecognizer:tap];
+
+        }
         
     }
     return self;
@@ -195,7 +201,7 @@
 {
     
     [super layoutSubviews];
-    
+
     self.textField.frame = self.bounds;
     self.textLab.frame = self.bounds ;
     self.textLab.right =self.bounds.size.width - 15;
